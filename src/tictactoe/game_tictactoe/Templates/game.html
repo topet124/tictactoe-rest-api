@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tictac toe</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-debug.js"></script>
+     <script>
+        {% include 'js/knockout.js' %}
+    </script>
+    {% csrf_token %}
+    <script type="text/javascript">
+    // using jQuery
+    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+    </script>
+
+</head>
+<body style="background-color:aliceblue; " class="text-center" >
+<div class="loader">
+    <!-- Just an image -->
+<nav class="navbar navbar-light bg-primary text-justify">
+    <a class="navbar-brand" href="#">
+        <h1 >Let the game begin!</h1>
+      <img src="https://banner2.cleanpng.com/20180423/rre/kisspng-tic-tac-toe-oxo-tic-tac-toe-classic-the-tic-tac-to-chess-board-5ade1f78624de5.9031790615245064884027.jpg" width="30" height="30" alt="">
+    </a>
+</nav>
+    
+    <p>Please select where you would like to have the X marked on the board</p>
+    <p>| <span data-bind="text : board()[0]"></span> | <span data-bind="text : board()[1]"></span> | <span data-bind="text : board()[2]"></span></p>
+    <p>| <span data-bind="text : board()[3]"></span> | <span data-bind="text : board()[4]"></span> | <span data-bind="text : board()[5]"></span></p>
+    <p>| <span data-bind="text : board()[6]"></span> | <span data-bind="text : board()[7]"></span> | <span data-bind="text : board()[8]"></span></p>
+
+    <div>
+        <input data-bind="value :temitope" placeholder="insert number"/>
+        <button data-bind="click :getStarted" type="button" class="btn btn-primary">click me</button>
+    </div>
+
+</div>
+
+
+</body>
+<nav  style="margin-top:10px;"   class="navbar navbar-light bg-primary text-justify">
+    <a class="navbar-brand" href="#">
+        <h1 ></h1>
+      <img src="https://banner2.cleanpng.com/20180423/rre/kisspng-tic-tac-toe-oxo-tic-tac-toe-classic-the-tic-tac-to-chess-board-5ade1f78624de5.9031790615245064884027.jpg" width="30" height="30" alt="">
+    </a>
+</nav>
+    
+</html>
+
